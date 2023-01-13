@@ -1,0 +1,30 @@
+h2 Cabecera de mi página
+
+div
+    p Párrafo con texto
+
+div 
+    a(href="http://google.es", target="_blank", id="enlaceGoogle") Google.es 
+    a#enlace20Min(href="http://20minutos.com", class="enlace principal") 20Minutos.COM 
+    a.enlace.secundario(href="http://marca.com") Marca.com 
+
+div 
+    p= title
+    p El título de mi página es #{title}
+    p El tercer animal es: #{animales[2]}
+
+.iteradores 
+    ul 
+        - for(let i = 0; i<animales.length; i++)
+            li= animales[i]
+
+    ul
+        each animal in animales
+            li= animal
+
+    - animales = []
+    ul 
+        each animal in animales 
+            li= animal 
+        else
+            li No hay animales

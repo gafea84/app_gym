@@ -1,0 +1,33 @@
+GET http://localhost:3000/api/clients?limit=50
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyOCwidXNlcl9yb2xlIjoicmVndWxhciIsImV4cGlyYXRpb25fZGF0ZSI6MTY2NzUwNTc1MCwiaWF0IjoxNjY3NTA1NDUwfQ.FxvhmSuW0fwyxQod-Kj09f2S_xjWQZckXOBfvi0HZqs
+
+###
+POST http://localhost:3000/api/clients  
+Content-Type: application/json
+
+{
+    "apellidos": "Garcíasadsadasd",
+    "direccion": "C Falsa 1234",
+    "email": "a@a.co",
+    "genero": "F",
+    "fecha_nacimiento": "1990-3-12",
+    "edad": 14,
+    "cuota": 18.90,
+    "dni": "2039209329K"
+}
+
+###
+PUT http://localhost:3000/api/clients/11
+Content-Type: application/json
+
+{
+    "nombre": "Orsa",
+    "apellidos": "Prada",
+    "direccion": "783 Melrose Road",
+    "email": "ofentema@nbcnews.com",
+    "edad": 34,
+    "genero": "f",
+    "cuota": "18.90",
+    "fecha_nacimiento": "1974-02-21",
+    "dni": "714119403u"
+}

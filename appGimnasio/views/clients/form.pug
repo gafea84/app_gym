@@ -1,0 +1,33 @@
+extends ../layout.pug
+
+block content 
+    form(action="/clients/create", method="post") 
+        //- (div>label.form-label+input:text.form-control)*9
+        div.mb-3
+            label.form-label Nombre 
+            input.form-control(type="text", name="nombre")
+        div.mb-3
+            label.form-label Apellidos
+            input.form-control(type="text", name="apellidos")
+        div.mb-3
+            label.form-label Dirección
+            input.form-control(type="text", name="direccion")
+        div.mb-3
+            label.form-label Email
+            input.form-control(type="email", name="email")
+        div.mb-3
+            label.form-label Edad
+            input.form-control(type="number", name="edad")
+        div.mb-3
+            label.form-label Género
+            input.form-control(type="text", name="genero")
+        div.mb-3
+            label.form-label Cuota
+            input.form-control(type="number", name="cuota")
+        div.mb-3
+            label.form-label Fecha de nacimiento
+            input.form-control(type="date", name="fecha_nacimiento")
+        div.mb-3
+            label.form-label DNI
+            input.form-control(type="text", name="dni")
+        input.btn.btn-info(type="submit", value="Enviar")

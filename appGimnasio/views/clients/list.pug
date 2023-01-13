@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block content
+    // Comentario HTML 
+    //- Comentario PUG
+    h2 Lista de clientes
+
+    table.table
+        thead
+            tr
+                th Nombre 
+                th Apellidos 
+                th Dirección 
+                th Email 
+                th Edad
+                th Acciones
+        tbody 
+            each cliente in clientes
+                tr
+                    td= cliente.nombre
+                    td= cliente.apellidos
+                    td= cliente.direccion
+                    td= cliente.email
+                    td= cliente.edad
+                    td
+                        a.btn.btn-info.btn-sm.me-2(href="/clients/edit/"+cliente.id) Editar
+                        a.btn.btn-danger.btn-sm(href="/clients/delete/"+cliente.id) Borrar
+
+                        //- GET /clients/delete/CLIENTEID
